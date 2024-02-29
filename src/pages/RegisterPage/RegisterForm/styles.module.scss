@@ -29,6 +29,7 @@
         display: flex;
         flex-direction: column;
         min-width: 90%;
+        max-width: 90%;
         align-items: center;
         gap: .625rem;
 
@@ -61,10 +62,17 @@
             background-color: var(--grey-300);
             border-radius: var(--button-radius);
             border: 1px solid var(--grey-0);
-            padding-inline: 0;
             color: var(--grey-0);
             font-size: var(--font-size-t2);
+            padding-inline: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            option {
+                color: var(--grey-0);
+            }
         }
+
         
         p{
             color: var(--negative);

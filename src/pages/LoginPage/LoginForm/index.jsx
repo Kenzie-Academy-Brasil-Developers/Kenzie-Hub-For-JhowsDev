@@ -17,7 +17,7 @@ export const LoginForm = ({ setUser }) => {
     const navigate = useNavigate()
 
     const notifyError = () => {
-        toast.error("Ops! Algo deu errado", {
+        toast.error("Usuário ou senha invalidos!", {
            position: "top-right",
            autoClose: 3000,
            theme: "dark",
@@ -47,8 +47,8 @@ export const LoginForm = ({ setUser }) => {
             <InputLogin label="Email" errors={errors.email} placeholder="Digite aqui seu email" type="email" {...register("email")}/>
             <InputLogin label="Senha" errors={errors.password} placeholder="Digite aqui sua senha" type="password" {...register("password")}/>
             <button className={styles.loginButton}>Entrar</button>
-            <Link to={"/register"} className={styles.link}>Ainda não possui uma conta?</Link>
-            <button className={styles.registerButton}>Cadastre-se</button>
+            <p>Ainda não possui uma conta?</p>
+            <Link className={styles.registerButton} to={"/register"}>Cadastre-se</Link>
         </form>   
         <ToastContainer />
         </>

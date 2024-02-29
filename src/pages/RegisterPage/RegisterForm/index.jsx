@@ -6,6 +6,7 @@ import { formRegisterSchema } from "./FormSchema"
 import { api } from "../../../services/api"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom"
 
 export const RegisterForm = () => {
 
@@ -14,7 +15,7 @@ export const RegisterForm = () => {
     })
 
     const notifySecess = () => {
-        toast.success("Produto Adicionado no carrinho !!", {
+        toast.success("Conta criada com sucesso!", {
            position:"top-right",
            autoClose: 3000,
            theme: "dark",
@@ -29,10 +30,13 @@ export const RegisterForm = () => {
         })
      }
 
+    const navigate = useNavigate()
+
     const submitApi = async (formData) => {
         try {
             const { data } = await api.post("/users", formData)
             notifySecess()
+            navigate("/")
         } catch (error) {
             console.log(error)
             notifyError()
