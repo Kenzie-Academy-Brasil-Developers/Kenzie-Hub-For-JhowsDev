@@ -1,4 +1,4 @@
-.formRegister{
+.formLogin{
     width: 90%;
     max-width: 23.125rem;
     min-width: 18.75rem;
@@ -13,23 +13,22 @@
     background-color: var(--grey-600);
     padding-block: 3rem;
 
+    p{
+        color: var(--grey-100);
+        font-size: 12px;
+        font-weight: 600;
+    }
+
     h2{
         color: var(--grey-0);
         font-size: var(--font-size-t1);
         font-weight: var(--font-weight-bold);
     }
 
-    p{
-        font-size: 12px;
-        color: var(--grey-100);
-    }
-
     div{
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         min-width: 90%;
-        max-width: 90%;
         align-items: center;
         gap: .625rem;
 
@@ -52,39 +51,40 @@
             font-size: var(--font-size-t2);
         }
 
-        
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px var(--grey-300) inset;
+            -webkit-text-fill-color: var(--grey-0) !important;
+        }        
 
-        select{
-            box-sizing: border-box;
-            width: 90%;
-            min-width: 100%;
-            height: 3.125rem;
-            background-color: var(--grey-300);
-            border-radius: var(--button-radius);
-            border: 1px solid var(--grey-0);
-            color: var(--grey-0);
-            font-size: var(--font-size-t2);
-            padding-inline: 1rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            option {
-                color: var(--grey-0);
-            }
-        }
-
-        
         p{
             color: var(--negative);
             align-self: flex-start;
         }
     }
 
+    .loginButton{
+        height: 48px;
+        border-radius: var(--button-radius);
+        background-color: var(--color-primary);
+        font-size: var(--font-size-t2);
+        font-weight: 500;
+        color: var(--grey-0);
+        width: 90%;
+        cursor: pointer;
+        border: none;
+    }
+
     .registerButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 48px;
         border-radius: var(--button-radius);
         background-color: var(--grey-100);
         color: var(--grey-0);
+        text-decoration: none;
+        font-size: var(--font-size-t2);
+        font-weight: 500;
         width: 90%;
         cursor: pointer;
     }

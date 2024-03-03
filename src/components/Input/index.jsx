@@ -1,6 +1,6 @@
-import { forwardRef } from "react"
+import { forwardRef } from "react";
 
-export const InputLogin = forwardRef(({label, errors, ...rest}, ref) => {
+export const Input = forwardRef(({label, errors, ...rest}, ref) => {
     return (
         <div>
             <label>{label}</label>

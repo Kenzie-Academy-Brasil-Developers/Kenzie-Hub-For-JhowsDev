@@ -1,27 +1,29 @@
-import { useNavigate } from "react-router-dom"
-import logo from "../../assets/logo.svg"
-import styles from "./styles.module.scss"
+import logo from "../../assets/logo.svg";
+import styles from "./styles.module.scss";
+import { useContext } from "react";
+import { UserContext } from "../../provider/UserProvider";
+import { Helmet } from "react-helmet";
 
-export const DashboardPage = ({ user, setUser }) => {
+export const DashboardPage = () => {
 
-    const navigate = useNavigate()
+    const { logoutFunction, user } = useContext(UserContext)
 
-    const logout = () => {
-        setUser({})
-        localStorage.removeItem("@KenzieHub: userToken")
-        navigate("/")
-    }
+    console.log(user)
 
     return (
+        <>
+        <Helmet>
+            <title>Kenzie Hub</title>
+        </Helmet>
         <div className={styles.container}>
             <header>
                 <img src={logo} alt="Kenzie Hub" />
-                <button onClick={logout}>Sair</button>
+                <button onClick={logoutFunction}>Sair</button>
             </header>
             <main>
                 <div>
-                <h2>{`Olá, ${user.user.name}`}</h2>
-                <p>{user.user.course_module}</p>
+                <h2>{`Olá, ${user.name}`}</h2>
+                <p>{user.course_module}</p>
                 </div>
             </main>
             <section>
@@ -29,5 +31,6 @@ export const DashboardPage = ({ user, setUser }) => {
                 <p>Nossa aplicação está em desenvolvimento, em breve teremos novidades</p>
             </section>
         </div>
+        </>
     )
 }
