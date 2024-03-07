@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formRegisterSchema } from "./FormSchema";
 import { InputPassword } from "../InputPassword/index.jsx";
 import { useContext } from "react";
-import { UserContext } from "../../provider/UserProvider.jsx";
+import { UserContext } from "../../provider/UserContex.jsx";
 
 export const RegisterForm = () => {
 

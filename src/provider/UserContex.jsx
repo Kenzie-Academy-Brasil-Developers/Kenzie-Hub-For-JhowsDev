@@ -10,6 +10,8 @@ export const UserProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
 
+    const [userTechs, setUsertechs] = useState([])
+
     const navigate = useNavigate()
 
     const notifySecessLogin = () => {
@@ -86,7 +88,7 @@ export const UserProvider = ({ children }) => {
                          },
                     })
                     setUser(data)
-                    console.log(data)
+                    setUsertechs(data.techs)
                     navigate("/dashboard")
                 } catch (error) {
                     console.log(error)
@@ -98,7 +100,7 @@ export const UserProvider = ({ children }) => {
     },[])
 
     return (
-        <UserContext.Provider value={{ user, loginFunction, registerFunction, logoutFunction }}>
+        <UserContext.Provider value={{ user, userTechs, setUsertechs, loginFunction, registerFunction, logoutFunction }}>
             {children}
         </UserContext.Provider>
     )

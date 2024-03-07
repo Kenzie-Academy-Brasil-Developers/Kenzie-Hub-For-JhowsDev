@@ -6,7 +6,7 @@ import { formLoginSchema } from "./FormLoginSchema";
 import { Input } from "../Input";
 import { InputPassword } from "../InputPassword";
 import { useContext } from "react";
-import { UserContext } from "../../provider/UserProvider";
+import { UserContext } from "../../provider/UserContex";
 
 export const LoginForm = () => {
 
