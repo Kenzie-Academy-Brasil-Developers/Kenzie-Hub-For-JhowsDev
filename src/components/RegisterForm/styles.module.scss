@@ -89,4 +89,8 @@
         cursor: pointer;
         border: none;
     }
+
+    .registerButton:hover{
+        background-color: var(--color-primary-Focus);
+    }
 }

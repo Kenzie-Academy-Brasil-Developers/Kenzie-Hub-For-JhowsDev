@@ -39,7 +39,7 @@ export const EditTechModal = () => {
             <form onSubmit={handleSubmit(submitForm)}>
                 <div>
                     <label>Nome</label>
-                    <input type="text" placeholder="Digite aqui a tecnologia" {...register("title")}/>
+                    <input type="text" placeholder="Digite aqui a tecnologia" {...register("title")} disabled/>
                     {errors.title ? <p>{errors.title.message}</p> : null}
                 </div>
                 <div>

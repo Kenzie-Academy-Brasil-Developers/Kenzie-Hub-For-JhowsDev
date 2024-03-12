@@ -15,7 +15,6 @@ export const CreateTechModal = () => {
     })
 
     const submitForm = (formData) => {
-        console.log(formData)
         creatTech(formData)
     }
 

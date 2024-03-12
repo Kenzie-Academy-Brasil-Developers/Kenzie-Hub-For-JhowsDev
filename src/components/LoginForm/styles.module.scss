@@ -74,6 +74,10 @@
         border: none;
     }
 
+    .loginButton:hover{
+        background-color: var(--color-primary-Focus);
+    }
+
     .registerButton{
         display: flex;
         justify-content: center;
@@ -87,5 +91,9 @@
         font-weight: 500;
         width: 90%;
         cursor: pointer;
+    }
+
+    .registerButton:hover{
+        background-color: var(--grey-300);
     }
 }

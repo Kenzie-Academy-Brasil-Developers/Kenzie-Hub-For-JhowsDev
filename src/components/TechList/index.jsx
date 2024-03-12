@@ -9,9 +9,13 @@ export const TechList = () => {
     
     return(
         <>
-            <ul className={styles.techContainer}>
-                {userTechs.map(tech => <TechCard key={tech.id} tech={tech}/>)}
-            </ul>
+        {
+            userTechs.length > 0 ? (
+                <ul className={styles.techContainer}>
+                    {userTechs.map(tech => <TechCard key={tech.id} tech={tech}/>)}
+                </ul>
+            ) : null
+        }
         </>
     )
 }

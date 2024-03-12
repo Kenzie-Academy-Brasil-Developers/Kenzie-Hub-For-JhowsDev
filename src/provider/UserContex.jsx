@@ -99,6 +99,8 @@ export const UserProvider = ({ children }) => {
         loadUser()
     },[])
 
+    console.log(user)
+
     return (
         <UserContext.Provider value={{ user, userTechs, setUsertechs, loginFunction, registerFunction, logoutFunction }}>
             {children}

@@ -6,40 +6,4 @@
     flex-direction: column;
     gap: .75rem;
     border-radius: var(--button-radius);
-
-    li{
-        background-color: var(--grey-900);
-        box-sizing: border-box;
-        min-width: 95%;
-        max-width: 95%;
-        padding-inline: 3%;
-        margin: 0 auto;
-        height: 3.125rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: var(--button-radius);
-        
-
-        h3{
-            font-size: .875rem;
-            font-weight: var(--font-weight-bold);
-            color: #FFFFFF;
-        }
-        
-        div{
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-
-            p{
-                font-size: .75rem;
-                color: var(--grey-100);
-            }
-
-            button {
-                background-color: transparent;
-            }
-        }
     }
-}
