@@ -9,8 +9,6 @@ export const TechProvider = ({ children }) => {
 
     const { userTechs, setUsertechs} = useContext(UserContext)
 
-    console.log(userTechs)
-
     const [editing, setEditing] = useState(null)
 
     const [creating, setCreating] = useState(false)
